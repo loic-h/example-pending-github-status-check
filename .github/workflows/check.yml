@@ -1,9 +1,10 @@
 name: check
-on: push
+on:
+  push:
+    paths-ignore: 'logs/**'
 jobs:
   check:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
