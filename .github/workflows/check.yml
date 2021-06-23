@@ -18,8 +18,7 @@ jobs:
         run: |
           git config --global user.name 'Update bot'
           git config --global user.email 'no-reply@redbull.design'
-          git add .
-          git diff-index --quiet HEAD || git commit -m 'Automated logs update'
+          git commit -am 'Automated logs update'
 
       - name: Push changes
         uses: ad-m/github-push-action@master
