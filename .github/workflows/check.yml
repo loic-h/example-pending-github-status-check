@@ -19,4 +19,8 @@ jobs:
           git diff-index --quiet HEAD || git commit -m 'Automated logs update'
 
       - name: Push changes
+<<<<<<< HEAD
         uses: ad-m/github-push-action@master
+=======
+        uses: ad-m/github-push-action@main
+>>>>>>> dfbcd0184fd35cbde660070ff47498f24fafe4cd
