@@ -19,4 +19,4 @@ jobs:
           git diff-index --quiet HEAD || git commit -m 'Automated logs update'
 
       - name: Push changes
-        uses: actions/checkout@v2
+        uses: ad-m/github-push-action@master
