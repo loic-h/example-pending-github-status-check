@@ -17,7 +17,6 @@ jobs:
           git config --global user.email 'no-reply@redbull.design'
           git add .
           git diff-index --quiet HEAD || git commit -m 'Automated logs update'
-          git push -u origin HEAD
 
       - name: Push changes
         uses: actions/checkout@v2
