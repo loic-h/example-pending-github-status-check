@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
       - name: Update log
         run: ./scripts/write-log.sh
 
