@@ -1,7 +1,7 @@
 name: check
 on:
   push:
-    paths-ignore: 'logs/**'
+    paths-ignore: '**'
 jobs:
   check:
     runs-on: ubuntu-latest
