@@ -10,4 +10,4 @@ Branch protection rule is setup to have the check action required in order to me
 The push done by the action does not trigger the check, [as per design](https://docs.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token). No check being triggered, it should not be required before merging.
 
 ## Actual result
-The PR is waiting for a check that is never triggered. The check list shows zero action done; the PR still detected a change in the git hostory and expect the check to be green before allowing the merge.
+The PR is waiting for a check that is never triggered. The check list shows zero action done; the PR still detected a change in the git history and expect the check to be green before allowing the merge.
