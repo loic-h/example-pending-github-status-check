@@ -1,7 +1,9 @@
 on:
   workflow_run:
     workflows: ["check"]
-    types: [completed]
+    branches: [main]
+    types:
+      - completed
 
 jobs:
   commit_snapshots:
