@@ -1,7 +1,7 @@
 name: check
 on:
   push:
-    paths-ignore: 'logs/**'
+    paths-ignore: "logs/**"
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -20,8 +20,3 @@ jobs:
           git config --global user.name 'Update bot'
           git config --global user.email 'no-reply@redbull.design'
           git commit -am 'Automated logs update'
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          branch: ${{ github.ref }}
