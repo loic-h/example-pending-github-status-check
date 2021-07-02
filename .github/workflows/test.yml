@@ -1,14 +1,11 @@
-name: test
-on: push
-jobs:
-  job-1:
-    runs-on: ubuntu-latest
-    steps:
-      - name: "Job 1: Do nothing"
-        run: exit 0
+on:
+  workflow_run:
+    workflows: ["check"]
 
-  job-2:
+jobs:
+  commit_snapshots:
     runs-on: ubuntu-latest
     steps:
-      - name: "Job 2: Do nothing"
-        run: exit 0
+      - name: Test workflow run
+        run: |
+          echo 'test run'
