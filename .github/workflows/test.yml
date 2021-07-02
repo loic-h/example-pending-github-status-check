@@ -1,6 +1,7 @@
 on:
   workflow_run:
     workflows: ["check"]
+    types: [completed]
 
 jobs:
   commit_snapshots:
@@ -9,3 +10,7 @@ jobs:
       - name: Test workflow run
         run: |
           echo 'test run'
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ github.ref }}
